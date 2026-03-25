@@ -1436,41 +1436,93 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   .hamburger { display: flex; }
 
   .container { padding: 0 20px; }
+
+  /* Hero — tighter, hide scroll */
+  .hero { min-height: 500px; }
+  .hero-content { padding: 0 20px; }
+  .hero-content p { font-size: 0.92rem; }
+  .hero-scroll { display: none; }
+  .page-hero { min-height: 320px; }
+
+  /* Info bar — smaller and cleaner */
+  .info-bar { padding: 20px 0; }
+  .info-bar-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .info-bar-grid .info-bar-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .info-bar-value { font-size: 1rem; }
+  .info-bar-label { font-size: 0.6rem; letter-spacing: 1.5px; }
+
+  /* Sections — tighter spacing */
+  .section { padding: 60px 0; }
+  .section-header { margin: 0 auto 40px; }
+  h1 { font-size: clamp(2rem, 8vw, 3rem); }
+
+  /* Features */
   .features-grid { grid-template-columns: 1fr; gap: 15px; }
+
+  /* Cruises preview (home) */
+  .cruises-preview-grid { grid-template-columns: 1fr; gap: 20px; }
+  .cruise-preview-body { padding: 24px 24px 28px; }
+
+  /* Cruises page */
   .cruises-grid { grid-template-columns: 1fr; gap: 24px; }
   .cruise-card-body { padding: 28px 24px 32px; }
   .cruise-highlights { padding: 24px 20px; }
   .cruise-card-expanded .cruise-card-image { height: 260px; }
   .cruise-gallery { grid-template-columns: 1fr; }
   .cruise-gallery img { height: 220px; }
+
+  /* Image galleries — center orphan 3rd item */
+  .image-gallery { grid-template-columns: 1fr 1fr; }
+  .image-gallery .gallery-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  /* Fleet */
   .fleet-grid { grid-template-columns: 1fr; gap: 15px; }
   .fleet-gallery-frame { padding: 20px; }
-  .about-preview { grid-template-columns: 1fr; gap: 40px; }
+  .fleet-specs { gap: 12px; }
+  .fleet-spec { font-size: 0.65rem; }
 
+  /* About preview (home) */
+  .about-preview { grid-template-columns: 1fr; gap: 40px; }
+  .about-text .section-label { text-align: center; }
+  .about-text h2 { text-align: center; }
+  .gold-line-left { margin: 16px auto 24px; }
+
+  /* Split sections */
   .split-section { grid-template-columns: 1fr; }
   .split-section.reverse .split-image { order: 0; }
   .split-section.reverse .split-text { order: 1; }
   .split-text { padding: 40px 20px; }
+  .split-text .section-label { text-align: center; }
+  .split-text h2 { text-align: center; }
   .split-image { min-height: 300px; }
-  .info-bar-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .info-bar-grid .info-bar-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .cruises-preview-grid { grid-template-columns: 1fr; gap: 20px; }
-  .cruise-preview-body { padding: 24px 24px 28px; }
-  .includes-grid { grid-template-columns: 1fr; gap: 15px; }
-  .testimonials-grid { grid-template-columns: 1fr; gap: 15px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-  .stat-row { gap: 24px; }
-  .image-gallery { grid-template-columns: 1fr 1fr; }
 
+  /* Includes */
+  .includes-grid { grid-template-columns: 1fr; gap: 15px; }
+
+  /* Testimonials */
+  .testimonials-grid { grid-template-columns: 1fr; gap: 15px; }
+
+  /* Stats — center */
+  .stat-row { gap: 24px; justify-content: center; flex-wrap: wrap; }
+
+  /* CTA banner */
+  .cta-banner { padding: 60px 20px; }
+
+  /* Image band */
+  .image-band { height: 50vh; min-height: 280px; }
+
+  /* Form */
   .form-grid { grid-template-columns: 1fr; }
   .calendar-iframe { height: 400px; }
 
-  .section { padding: 60px 0; }
-  .hero { min-height: 500px; }
-  .page-hero { min-height: 320px; }
-  .image-band { height: 50vh; min-height: 280px; }
-
-  h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  /* Footer — centered on mobile */
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-brand { text-align: center; }
+  .footer-col { text-align: center; }
 
   /* Convert horizontal reveals to vertical on mobile */
   .reveal-left, .reveal-right {
