@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Charter — Portland Private Charters</title>
+  <meta name="description" content="Book a private charter on Casco Bay, Portland Maine. Check availability, submit a booking request, or contact us directly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="logo">Portland <span>Private</span> Charters</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cruises.html">Cruises</a></li>
+        <li><a href="fleet.html">Our Fleet</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="book.html" class="btn btn-gold nav-cta active">Book Now</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img src="images/book-hero-sunset.jpg" alt="Boat on calm water at sunset on Casco Bay" style="object-position: center 60%">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-label">Reserve Your Trip</p>
+      <h1>Book Your Charter</h1>
+      <p>Reserve your private Casco Bay experience.</p>
+    </div>
+  </section>
+
+  <!-- Contact / Booking Form -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-text">
+        <p class="section-label">Get in Touch</p>
+        <h2>Book Your Charter</h2>
+        <div class="gold-line gold-line-animate"></div>
+        <p>Submit your request and we'll confirm within 24 hours.</p>
+      </div>
+
+      <form id="booking-form" action="https://formspree.io/f/FORM_ID" method="POST" class="booking-form reveal">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(757) 478-2711">
+          </div>
+          <div class="form-group">
+            <label for="tour">Tour</label>
+            <select id="tour" name="tour" required>
+              <option value="" disabled selected>Select a cruise</option>
+              <option value="Sunset Cheese & Wine (Draco) — $800">Sunset Cheese &amp; Wine (Draco) — $800</option>
+              <option value="Oyster Farm (Draco) — $1,200">Oyster Farm Adventure (Draco) — $1,200</option>
+              <option value="Oyster Farm (Gemma) — $3,500">Oyster Farm Adventure (Gemma) — $3,500</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group form-group-guests">
+            <div class="guest-field">
+              <label for="adults">Adults</label>
+              <input type="number" id="adults" name="adults" min="1" max="6" value="2" required>
+            </div>
+            <div class="guest-field">
+              <label for="children">Children</label>
+              <input type="number" id="children" name="children" min="0" max="5" value="0">
+            </div>
+          </div>
+        </div>
+        <p class="form-note">Maximum 6 guests per charter (adults + children).</p>
+        <div class="form-group form-full">
+          <label for="requests">Special Requests</label>
+          <textarea id="requests" name="requests" rows="4" placeholder="Celebrations, dietary needs, accessibility — anything we should know."></textarea>
+        </div>
+        <div id="form-status"></div>
+        <button type="submit" class="btn btn-gold form-submit">Send Booking Request</button>
+      </form>
+
+      <div class="direct-contact reveal">
+        <p>Prefer to reach out directly?</p>
+        <p>
+          <a href="tel:+17574782711">(757) 478-2711</a> &nbsp;|&nbsp;
+          <a href="mailto:portlandprivatecharters@gmail.com">portlandprivatecharters@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar -->
+  <section class="section section-cream" id="calendar">
+    <div class="container">
+      <div class="section-header reveal-text">
+        <p class="section-label">Check Availability</p>
+        <h2>Our Calendar</h2>
+        <div class="gold-line gold-line-animate"></div>
+        <p>View open dates below, then submit a booking request.</p>
+      </div>
+      <div class="calendar-wrap reveal">
+        <!-- Owner: replace src with your public Google Calendar embed URL -->
+        <iframe src="https://calendar.google.com/calendar/embed?src=CALENDAR_ID&ctz=America/New_York&mode=MONTH" class="calendar-iframe" title="Availability Calendar" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map + Contact Info -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal-text">
+        <p class="section-label">Find Us</p>
+        <h2>Our Location</h2>
+        <div class="gold-line gold-line-animate"></div>
+        <p>All charters depart from Portland, Maine.</p>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.5!2d-70.2482624!3d43.6568407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb29c40a65aa76b%3A0xbbf80b03e7f5c563!2sCasco%20Bay%20Lines%20Ferry%20Terminal!5e0!3m2!1sen!2sus!4v1710000000000" class="map-iframe" title="Portland Maine Location" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header reveal-text">
+        <p class="section-label">Planning Your Charter</p>
+        <h2>Frequently Asked Questions</h2>
+        <div class="gold-line gold-line-animate"></div>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">Can we bring our own food and drinks on board?</button>
+          <div class="faq-answer">
+            <p>You're welcome to bring your own food aboard any charter — we provide a cooler and ice to keep things cold. On our Sunset Cheese &amp; Wine Cruise, wine and cheese pairings are included. On the Oyster Farm Adventure, drinks and fresh oysters are provided. Any food purchased at island or bay stops is at the guest's expense.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is the experience suitable for kids?</button>
+          <div class="faq-answer">
+            <p>Yes! Our charters are family-friendly and suitable for kids of all ages. Children love seeing the islands, spotting wildlife, and learning from the oyster farmers.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How many guests can join the charter?</button>
+          <div class="faq-answer">
+            <p>Our boat comfortably accommodates up to 6 passengers for the standard tours. Each charter is completely private — it's just your group and our captain.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is the charter weather dependent?</button>
+          <div class="faq-answer">
+            <p>Yes, weather and sea conditions do affect our ability to operate safely. We closely monitor forecasts and will contact you in advance if conditions look unfavorable. If we need to cancel or reschedule due to weather, we'll work with you to find an alternative date or provide a full refund. Your safety and comfort are our top priorities.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's included in the tour price?</button>
+          <div class="faq-answer">
+            <p>Your private charter includes the captain and crew, all safety equipment, fresh oyster tastings (on oyster farm tour), or wine and cheese pairings (on sunset cruise), and fuel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Portland <span>Private</span> Charters</div>
+          <p>Private boat charters through the stunning archipelago of Casco Bay, Portland, Maine. Over 45 years of experience on the water.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="cruises.html">Cruises</a>
+          <a href="fleet.html">Our Fleet</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Charters</h4>
+          <a href="cruises.html">Sunset Cheese &amp; Wine</a>
+          <a href="cruises.html">Oyster Farm Adventure</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+17574782711">(757) 478-2711</a>
+          <a href="mailto:portlandprivatecharters@gmail.com">portlandprivatecharters@gmail.com</a>
+          <a href="https://maps.app.goo.gl/DPfCNSmucvY8tDir9" target="_blank">Portland, Maine</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Portland Private Charters. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
