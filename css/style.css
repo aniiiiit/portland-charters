@@ -1447,7 +1447,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   /* Info bar — smaller and cleaner */
   .info-bar { padding: 20px 0; }
   .info-bar-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .info-bar-grid .info-bar-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .info-bar-grid .info-bar-item:first-child { display: none; }
   .info-bar-value { font-size: 1rem; }
   .info-bar-label { font-size: 0.6rem; letter-spacing: 1.5px; }
 
