@@ -1519,10 +1519,15 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   .form-grid { grid-template-columns: 1fr; }
   .calendar-iframe { height: 400px; }
 
-  /* Footer — centered on mobile */
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-  .footer-brand { text-align: center; }
+  /* Footer — compact on mobile */
+  .footer { padding: 40px 0 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px 16px; margin-bottom: 24px; }
+  .footer-brand { grid-column: 1 / -1; text-align: center; }
+  .footer-brand p { font-size: 0.8rem; max-width: 320px; margin: 0 auto; }
   .footer-col { text-align: center; }
+  .footer-col h4 { margin-bottom: 12px; font-size: 0.68rem; }
+  .footer-col a { margin-bottom: 6px; font-size: 0.8rem; }
+  .footer-bottom { padding-top: 16px; font-size: 0.72rem; }
 
   /* Convert horizontal reveals to vertical on mobile */
   .reveal-left, .reveal-right {
