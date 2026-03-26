@@ -891,7 +891,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
 .cta-banner {
   text-align: center;
   padding: 80px 25px;
-  background: var(--cream, #faf8f4);
+  background: var(--white);
   color: var(--charcoal);
 }
 .cta-banner h2 { margin-bottom: 16px; }
