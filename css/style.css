@@ -1468,20 +1468,43 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   .cruise-card-body { padding: 28px 24px 32px; }
   .cruise-highlights { padding: 24px 20px; }
   .cruise-card-expanded .cruise-card-image { height: 260px; }
-  .cruise-gallery { grid-template-columns: 1fr; }
-  .cruise-gallery img { height: 220px; }
+  /* Cruise galleries — horizontal swipeable carousel */
+  .cruise-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+  }
+  .cruise-gallery::-webkit-scrollbar { display: none; }
+  .cruise-gallery img {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    height: 240px;
+  }
 
-  /* Image galleries — center orphan 3rd item */
-  .image-gallery { grid-template-columns: 1fr 1fr; }
-  .image-gallery .gallery-item:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    max-width: 50%;
-    margin: 0 auto;
+  /* Image galleries — horizontal swipeable carousel */
+  .image-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+  }
+  .image-gallery::-webkit-scrollbar { display: none; }
+  .image-gallery .gallery-item {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    aspect-ratio: 1.2;
   }
 
   /* Fleet */
   .fleet-grid { grid-template-columns: 1fr; gap: 15px; }
-  .fleet-gallery-frame { padding: 20px; }
+  .fleet-gallery-frame { padding: 20px; overflow: hidden; }
   .fleet-specs { gap: 12px; }
   .fleet-spec { font-size: 0.65rem; }
 
