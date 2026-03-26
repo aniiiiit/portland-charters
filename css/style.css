@@ -987,21 +987,29 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
 
 /* ---------- Cruises Preview (Home) ---------- */
 .cruises-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .cruise-preview-card {
+  position: sticky;
+  top: 100px;
   background: var(--white);
   border: 1px solid var(--divider);
   border-radius: 6px;
   overflow: hidden;
   transition: all 0.4s var(--ease);
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.06);
+  z-index: 1;
+}
+.cruise-preview-card:nth-child(2) {
+  top: 120px;
+  z-index: 2;
 }
 .cruise-preview-card:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
   border-color: var(--gold);
 }
 .cruise-preview-image {
@@ -1460,8 +1468,10 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   /* Features */
   .features-grid { grid-template-columns: 1fr; gap: 15px; }
 
-  /* Cruises preview (home) */
-  .cruises-preview-grid { grid-template-columns: 1fr; gap: 20px; }
+  /* Cruises preview (home) — sticky stack */
+  .cruises-preview-grid { gap: 16px; }
+  .cruise-preview-card { top: 80px; }
+  .cruise-preview-card:nth-child(2) { top: 96px; }
   .cruise-preview-body { padding: 24px 24px 28px; }
 
   /* Cruises page */
