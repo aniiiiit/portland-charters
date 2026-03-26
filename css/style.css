@@ -990,8 +990,6 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 900px;
-  margin: 0 auto;
 }
 .cruise-preview-card {
   position: sticky;
@@ -1013,13 +1011,14 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   border-color: var(--gold);
 }
 .cruise-preview-image {
-  height: 260px;
+  height: 320px;
   overflow: hidden;
 }
 .cruise-preview-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.6s var(--ease);
 }
 .cruise-preview-card:hover .cruise-preview-image img { transform: scale(1.04); }
