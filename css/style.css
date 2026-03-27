@@ -667,6 +667,16 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
   font-size: 1.05rem;
   font-weight: 400;
 }
+.cruise-detail-sub {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--text-light);
+  margin-top: 4px;
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
 
 /* ---------- Cruise Card Expanded ---------- */
 .cruise-card-expanded .cruise-card-image {
