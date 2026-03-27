@@ -112,7 +112,7 @@ if (bookingForm) {
     const tourSelect = document.getElementById('tour');
     const tourMap = {
       sunset: 'Sunset Cheese & Wine (Draco) — $800',
-      oyster: 'Oyster Farm (Draco) — $1,200'
+      oyster: 'Oyster Farm (Draco) 9:00 AM — $1,200'
     };
     const match = tourMap[tourParam];
     if (match) {
